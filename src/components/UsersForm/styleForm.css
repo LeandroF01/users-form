@@ -1,0 +1,61 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css");
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 25em;
+  height: auto;
+  background: rgba(43, 72, 101, 0.866);
+  border-radius: 0.3em;
+  color: white;
+}
+.form__title {
+  text-align: center;
+  font-size: 2em;
+  margin: 1.1em 0.7em;
+}
+.form__errors {
+  font-size: 0.9em;
+  font-weight: 500;
+  color: rgb(246, 107, 202);
+  margin: 0.2em 1em;
+}
+input {
+  display: flex;
+  width: 22em;
+  height: 2em;
+  margin: 1em auto auto 0.5em;
+  outline: none;
+  text-indent: 0.3em;
+}
+
+input[type="date"] {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.form__btn {
+  width: 20em;
+  aspect-ratio: 1;
+  height: 2em;
+  margin: 1em auto;
+  border: none;
+  color: rgba(255, 255, 255, 0.986);
+  font-weight: 600;
+  background: rgb(66, 145, 127);
+  border-radius: 0.2em;
+  cursor: pointer;
+}
+.form__close {
+  position: absolute;
+  cursor: pointer;
+  right: 0.5em;
+  margin: 0.5em;
+  font-size: 1.2em;
+}
+.form__close::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  content: "\58";
+  color: white;
+}

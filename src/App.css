@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css");
+
+:root {
+  --shadow-color: 270deg 10% 35%;
+  --shadow-elevation-medium: 0.3px 0.3px 0.5px hsl(var(--shadow-color) / 0.16),
+    0.8px 1px 1.6px -0.4px hsl(var(--shadow-color) / 0.2),
+    1.5px 1.8px 3px -0.7px hsl(var(--shadow-color) / 0.25),
+    2.7px 3.3px 5.5px -1.1px hsl(var(--shadow-color) / 0.3),
+    4.9px 6px 9.9px -1.4px hsl(var(--shadow-color) / 0.34);
+}
+body {
+  font-size: 14px;
+  margin: 0%;
+  padding: 0%;
+  font-family: "Roboto", sans-serif;
+  background-image: url("./assets/1775.jpg");
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+.App {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+.content-userlist {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin-top: 6.5em;
+  transform: skewY(-10deg);
+  position: absolute;
+}
+
+.button__open {
+  margin: 2.7em 0;
+  width: 7em;
+  height: 2.5em;
+  aspect-ratio: 1;
+  border-radius: 0.2em;
+  border: none;
+  color: white;
+  background: rgba(255, 0, 251, 0.3);
+  transition: clip-path 7s circle;
+  cursor: pointer;
+}
+.button__open:hover {
+  transition: linear 0.8s;
+  box-shadow: inset 100px 0 0 0 rgba(255, 0, 251, 0.588);
+  font-weight: 600;
+}
+
+.form-none {
+  display: none;
+}
+
+.form-container {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(4px);
+  z-index: 1;
+  animation: 1.3s box-wipe-enter;
+}
+
+@keyframes box-wipe-enter {
+  0% {
+    clip-path: inset(0% 60% 20% 10%);
+  }
+  50% {
+    clip-path: inset(0% 20% 60% 50%);
+  }
+  100% {
+    clip-path: inset(0);
+  }
+}
