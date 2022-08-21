@@ -1,5 +1,13 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css");
+:root {
+  --cl-white: rgb(249, 247, 247);
 
+  --cl-form: rgba(43, 72, 101, 0.866);
+
+  --cl-form-errors: rgb(246, 107, 202);
+
+  --cl-form-buttom: rgb(66, 145, 127);
+}
 .form {
   display: flex;
   flex-direction: column;
@@ -7,9 +15,9 @@
   position: relative;
   width: 25em;
   height: auto;
-  background: rgba(43, 72, 101, 0.866);
+  background: var(--cl-form);
   border-radius: 0.3em;
-  color: white;
+  color: var(--cl-white);
 }
 .form__title {
   text-align: center;
@@ -19,7 +27,7 @@
 .form__errors {
   font-size: 0.9em;
   font-weight: 500;
-  color: rgb(246, 107, 202);
+  color: var(--cl-form-errors);
   margin: 0.2em 1em;
 }
 input {
@@ -40,9 +48,9 @@ input[type="date"] {
   height: 2em;
   margin: 1em auto;
   border: none;
-  color: rgba(255, 255, 255, 0.986);
+  color: var(--cl-white);
   font-weight: 600;
-  background: rgb(66, 145, 127);
+  background: var(--cl-form-buttom);
   border-radius: 0.2em;
   cursor: pointer;
 }
@@ -57,5 +65,5 @@ input[type="date"] {
   font-family: "Font Awesome 5 Free";
   font-weight: 400;
   content: "\58";
-  color: white;
+  color: var(--cl-white);
 }

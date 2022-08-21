@@ -8,6 +8,12 @@
     1.5px 1.8px 3px -0.7px hsl(var(--shadow-color) / 0.25),
     2.7px 3.3px 5.5px -1.1px hsl(var(--shadow-color) / 0.3),
     4.9px 6px 9.9px -1.4px hsl(var(--shadow-color) / 0.34);
+
+  --cl-white: rgb(255, 251, 251);
+
+  --cl-buttom: rgba(255, 0, 251, 0.3);
+
+  --cl-buttom-hover: rgba(255, 0, 251, 0.588);
 }
 body {
   font-size: 14px;
@@ -41,14 +47,14 @@ body {
   aspect-ratio: 1;
   border-radius: 0.2em;
   border: none;
-  color: white;
-  background: rgba(255, 0, 251, 0.3);
+  color: var(--cl-white);
+  background: var(--cl-buttom);
   transition: clip-path 7s circle;
   cursor: pointer;
 }
 .button__open:hover {
   transition: linear 0.8s;
-  box-shadow: inset 100px 0 0 0 rgba(255, 0, 251, 0.588);
+  box-shadow: inset 100px 0 0 0 var(--cl-buttom-hover);
   font-weight: 600;
 }
 

@@ -1,4 +1,19 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css");
+
+:root {
+  --cl-white: rgb(247, 247, 247);
+
+  --cl-balck: rgb(9, 9, 9);
+
+  --cl-card-violet1: rgba(111, 11, 151, 0.245);
+
+  --cl-card-violet2: rgba(141, 5, 194, 0.112);
+
+  --cl-red-trash: rgba(238, 71, 71, 0.979);
+
+  --cl-red-trash-focus: rgb(250, 18, 18);
+}
+
 ul,
 li {
   list-style: none;
@@ -14,8 +29,8 @@ li {
   position: relative;
   width: 22em;
   height: 15em;
-  background: rgba(111, 11, 151, 0.245);
-  color: white;
+  background: var(--cl-card-violet1);
+  color: var(--cl-white);
   transition: 0.5s;
   margin: 1em 3em;
   animation: 1.5s circle;
@@ -28,7 +43,7 @@ li {
   left: 0%;
   width: 100%;
   height: 1em;
-  background: rgba(141, 5, 194, 0.112);
+  background: var(--cl-card-violet2);
   transform-origin: bottom;
   transform: skewX(45deg);
   transition: 0.5s;
@@ -41,7 +56,7 @@ li {
   left: -1em;
   width: 1em;
   height: 100%;
-  background: rgba(111, 11, 151, 0.245);
+  background: var(--cl-card-violet1);
   transform-origin: left;
   transform: skewY(45deg);
   transition: 0.5s;
@@ -67,16 +82,17 @@ li {
   font-size: 1.3em;
   margin: 0.5em 1em;
   cursor: pointer;
+  color: var(--cl-balck);
 }
 .fa-trash {
-  color: rgba(224, 117, 117, 0.979);
+  color: var(--cl-red-trash);
 }
 
 .userlist__btn:focus:nth-child(1) {
-  color: red;
+  color: var(--cl-red-trash-focus);
 }
 .userlist__btn:focus:nth-child(2) {
-  color: white;
+  color: var(--cl-white);
 }
 
 @keyframes circle {
